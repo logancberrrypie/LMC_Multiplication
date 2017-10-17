@@ -1,0 +1,19 @@
+        INP 
+        STA FIRST
+        INP
+        STA SECOND
+TOP     LDA TOTAL
+        ADD SECOND
+        STA TOTAL
+        LDA FIRST
+        SUB ONE
+        STA FIRST
+        BRZ END
+        BRA TOP
+END     LDA TOTAL
+        OUT
+        HLT
+FIRST   DAT 0
+SECOND  DAT 0
+ONE     DAT 1
+TOTAL   DAT 0
